@@ -1,0 +1,43 @@
+.c-intro {
+
+    .o-cols {
+        @media ( max-width: $tablet_portrait + px ) {
+        	flex-direction: column-reverse;
+        	text-align: center;
+        }
+        
+        &__item {
+            &:last-of-type {
+                &:last-of-type {
+                    max-width: 280px;
+                    margin: 0 auto;
+
+                    img {
+                    	margin-bottom: 30px;
+                    }
+            	}
+            }
+        }
+    }
+    
+    &__sign {
+        @extend %lead--4;
+        margin-bottom: 50px;
+        letter-spacing: 2.1px;
+        text-transform: uppercase;
+        
+        @media ( max-width: $tablet_portrait + px ) {
+            margin-bottom: 30px;
+        }
+        
+        br {
+            @media ( min-width: $tablet_portrait + 1px ) {
+            	display: none;
+            }
+        }
+    }
+    
+    .o-article {
+        margin-bottom: 40px;
+    } 
+}

@@ -1,0 +1,50 @@
+.c-foryou {
+    padding-top: 20px;
+
+    .o-article {
+        margin-bottom: 40px;
+    }
+    
+    .o-cols {
+        flex-direction: row-reverse;
+        
+        @media ( max-width: $tablet_portrait + px ) {
+        	flex-direction: column-reverse;
+        }
+
+        &__item {
+            width: 50%;            
+
+            // text
+            &:first-of-type {
+                max-width: 480px;
+                text-align: right;
+                
+                @media ( min-width: $tablet_portrait + 1px ) {
+                    padding: {
+                        right: 60px;
+                        left: 60px;
+                    }
+                }
+                
+                @media ( max-width: $tablet_portrait + px ) {
+                    width: 100%;
+                	margin: 0 0 0 auto;
+                }
+            }
+            
+            // image
+            &:last-of-type {
+                @extend %flex-shrink;
+                max-width: 360px;
+                margin: 0 0 0 auto;
+                
+                @media ( max-width: $tablet_portrait + px ) {
+                    max-width: 200px;
+                    margin: 0 auto 60px auto;
+                }
+            }
+        }
+    }
+
+}

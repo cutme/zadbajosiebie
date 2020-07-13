@@ -1,0 +1,10 @@
+.b-lazy {
+	@extend %anim;
+	opacity: 0;
+	
+	&.b-loaded {
+		opacity: 1;
+	}
+}
+
+

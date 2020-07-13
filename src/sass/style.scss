@@ -1,0 +1,48 @@
+@import 'settings/colors.scss';
+@import 'settings/global.scss';
+
+@import 'tools/clear';
+@import 'tools/functions';
+@import 'tools/mixins';
+@import 'tools/blazy';
+//@import 'tools/custom-select';
+//@import 'tools/glide';
+//@import 'tools/glightbox';
+
+@import 'generic/reset';
+@import 'generic/box-sizing';
+@import 'generic/screen-reader';
+
+@import 'elements/extends';
+@import 'elements/fonts';
+@import 'elements/form';
+@import 'elements/media';
+@import 'elements/page';
+@import 'elements/typography';
+
+@import 'objects/article';
+@import 'objects/btn';
+@import 'objects/cols';
+@import 'objects/container';
+@import 'objects/hamburger';
+@import 'objects/header';
+@import 'objects/icons';
+@import 'objects/leads';
+@import 'objects/logo';
+@import 'objects/section';
+@import 'objects/shapes';
+@import 'objects/wrap';
+
+@import 'components/about';
+@import 'components/contact';
+@import 'components/footer';
+@import 'components/forbusiness';
+@import 'components/foryou';
+@import 'components/helpfor';
+@import 'components/intro';
+@import 'components/nav';
+@import 'components/offer';
+@import 'components/top';
+@import 'components/wellmind';
+
+@import 'trumps/trumps';

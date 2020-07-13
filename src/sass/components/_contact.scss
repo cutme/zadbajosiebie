@@ -1,0 +1,46 @@
+.c-contact {
+    text-align: center;
+
+    &__image {
+        max-width: 227px;
+        margin: 100px auto;
+        
+        @media ( max-width: $tablet_portrait + px ) {
+        	margin-bottom: 50px;
+        }
+    }
+    
+    address {
+        p {
+            letter-spacing: .5px;
+            font-family: $merriweather;
+        }
+    }
+    
+    .o-article {
+        max-width: 560px;
+        margin: 0 auto;
+        
+        
+    }
+    
+    .o-lead {
+        &--1 {
+            text-align: center;
+        }
+        
+        &--2 {
+            margin-bottom: .9em;
+            letter-spacing: .99px;
+            font: {
+                family: $playfair;
+                weight: $bold;
+            }
+        }
+    }
+    
+    .o-section {
+        padding-top: 0;
+        padding-bottom: 70px;
+    }
+}

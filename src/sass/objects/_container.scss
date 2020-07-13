@@ -1,0 +1,8 @@
+.o-container {
+    overflow: hidden;
+    padding-top: 124px;
+    
+    @media ( max-width: $tablet_portrait + px ) {
+        padding-top: 100px;
+    }
+}

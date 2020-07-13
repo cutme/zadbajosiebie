@@ -1,0 +1,92 @@
+.o-form {
+    .form-row {
+        @extend %flex-wrap;
+        
+        &--fields {
+            width: calc(100% + 40px);
+            margin: {
+                left: -20px;
+                right: -20px;
+            }
+        }
+    }
+    
+    .form-forget {
+        padding: 10px 0 0 25px;
+        font-weight: $semibold;
+
+        a {
+            &:hover {
+                color: var(--primary-color);
+            }
+        }
+    }
+        
+    label {
+        &:not(.toggle) {
+            width: 100%;
+            margin-bottom: 10px;
+            padding-left: 30px;
+            text-align: left;
+            font: {
+                size: rem(12);
+                weight: $light;
+            }
+            color: $c-black-01;
+            
+            @media screen and ( min-width: $smartphone_portrait + 1px )  and ( max-width: $tablet + px ) {
+                padding-left: 0;
+            }
+        }
+    }
+
+    .form-col {
+        &--1 {
+            width: grid(155, $base + 40);
+            
+            @media screen and ( max-width: $tablet_portrait + px ) {
+                width: 25%;
+            }
+            
+            @media screen and ( max-width: $smartphone_portrait + px ) {
+                width: 50%;
+            }
+        }
+        
+        &--2 {
+            width: grid(310, $base + 40);
+            
+            @media screen and ( max-width: $tablet_portrait + px ) {
+                width: 50%;
+            }
+            
+            @media screen and ( max-width: $smartphone_portrait + px ) {
+                width: 100%;
+            }
+        }
+        
+        &--3 {
+            width: grid(465, $base + 40);
+            
+            @media screen and ( max-width: $tablet_portrait + px ) {
+                width: 50%;
+            }
+            
+            @media screen and ( max-width: $smartphone_portrait + px ) {
+                width: 100%;
+            }
+        }
+        
+        &--4 {
+            width: grid(620, $base + 40);
+            
+            @media screen and ( max-width: $tablet_portrait + px ) {
+                width: 50%;
+            }
+            
+            @media screen and ( max-width: $smartphone_portrait + px ) {
+                width: 100%;
+            }
+        }
+    }
+}

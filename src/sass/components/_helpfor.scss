@@ -1,0 +1,48 @@
+.c-helpfor {
+    
+    @media ( max-width: $tablet_portrait + px ) {
+    	margin-bottom: 100px;
+    }
+
+    hr {
+        margin: 110px auto;
+        
+        @media ( max-width: $tablet_portrait + px ) {
+        	margin: 50px auto;
+        }
+    }
+    
+    .o-cols {
+        
+        @media ( max-width: $tablet_portrait + px ) {
+        	flex-direction: column-reverse;
+        }
+        
+        &__item {
+            &:last-of-type {
+                margin: 0 auto 50px auto;
+            }
+
+            img {
+                @media ( min-width: $tablet_portrait + 1px ) {
+                    margin-top: -30px;
+                }
+                
+                @media ( max-width: $tablet_portrait + px ) {
+                	width: 215px;
+                }
+            }
+        }
+    }
+    
+    .o-lead {
+        &--3 {
+            margin-bottom: 1.5em;
+        }
+    }
+    
+    .o-section {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}

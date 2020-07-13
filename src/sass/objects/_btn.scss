@@ -1,0 +1,40 @@
+.o-btn {
+    @extend %anim;
+    display: inline-flex;
+    @extend %flex-xy;
+    @extend %rel;
+    height: 52px;
+    background-color: white;
+    white-space: nowrap;
+    padding: 0 50px 0 50px;
+    font-family: $text;
+    color: $c-black-01;
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 26px 16px;
+    font-weight: $bold;
+    line-height: 1em;
+    letter-spacing: -0.54px;
+    color: black;
+
+    span {
+        width: 100%;
+	}
+}
+
+a.o-btn,
+button.o-btn {
+//    .desktop & {
+    
+        &:hover {
+	        
+        	background-color: var(--primary-color);
+
+        	
+			&:after {
+				transform: translate3d(2px, -50%, 0);
+				color: white;
+			}
+        }
+//    }
+}

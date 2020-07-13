@@ -1,0 +1,53 @@
+.c-forbusiness {
+    
+    hr {
+        margin: 120px auto;
+        
+        @media ( max-width: $tablet_portrait + px ) {
+            margin: 50px auto;
+        }
+    }
+    
+    .o-cols {
+        @media ( max-width: $tablet_portrait + px ) {
+        	flex-direction: column-reverse;
+        }
+
+        &__item {
+            &:first-of-type {
+                
+                @media ( min-width: $tablet_portrait + 1px ) {
+                    padding-right: 40px;                	
+                }
+            }
+            
+            &:last-of-type {
+                @media ( max-width: $tablet_portrait + px ) {
+                    max-width: 230px;
+                    margin: 0 auto 50px auto;
+                }
+                
+                img {
+                    
+                }
+            }
+        }
+    }
+    
+    .o-article {
+        @media ( max-width: $tablet_portrait + px ) {
+        	max-width: 560px;
+        	margin: 0 auto 40px auto;
+        }
+    }
+    
+    .o-lead {
+        &--1 {
+            margin-bottom: .8em;
+        }
+    }
+    
+    .o-section {
+        padding: 0;
+    }
+}

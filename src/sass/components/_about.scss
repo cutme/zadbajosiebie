@@ -1,0 +1,25 @@
+.c-about {
+
+    .o-cols {
+        @media ( max-width: $tablet_portrait + px ) {
+        	flex-direction: column-reverse;
+        }
+        
+        &__item {
+            &:last-of-type {
+                &:last-of-type {
+                    max-width: 230px;
+                    margin: 0 auto;
+
+                    img {
+                    	margin-bottom: 30px;
+                    }
+            	}
+            }
+        }
+    }
+    
+    .o-article {
+        margin-bottom: 40px;
+    } 
+}

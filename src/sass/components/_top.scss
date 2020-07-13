@@ -1,0 +1,33 @@
+.c-top {
+    @include z-index(logo);
+    position: fixed;
+    left: 0; top: 0;
+    width: 100%;
+    height: 124px;
+    background: {
+        image: url(../img/assets/bg.svg);
+        repeat: no-repeat;
+        position: center top;
+    }
+    
+    @media ( max-width: $tablet_portrait + px ) {
+        height: 100px;
+    }
+	 
+    .c-nav {
+        margin: 0 0 0 auto;
+    }	 
+    
+    .o-logo {
+        @media ( max-width: $tablet_portrait + px ) {
+            width: 158px;
+            margin: 0 auto;
+        }
+    }
+
+	.o-wrap {
+    	@extend %flex;
+    	@extend %flex-y;
+    	height: 100%;
+	} 
+}

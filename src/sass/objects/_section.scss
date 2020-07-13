@@ -1,0 +1,21 @@
+.o-section {
+    padding: {
+        top: 90px;
+        bottom: 90px;
+    }
+    
+    @media ( max-width: $tablet_portrait + px ) {
+        padding: {
+            top: 60px;
+            bottom: 60px;
+        }
+    }
+    
+    @media ( max-width: $smartphone + px ) {
+        padding: {
+            top: 40px;
+            bottom: 40px;
+        }
+    }
+}
+

@@ -1,0 +1,70 @@
+.c-nav {
+    @include z-index(nav);
+    
+    &__menu {
+        @media ( min-width: $tablet_portrait + 1px ) {
+            display: flex;
+        }
+        
+        li {
+            padding: 0 20px;
+        }
+        
+        a {
+            white-space: nowrap;
+            font-size: rem(14);
+            
+            &:hover {
+                .desktop & {
+                    color: $c-violet-01;
+                }
+            }
+        }
+    }
+    
+    &.is-block {
+        display: block;
+    }
+    
+    @media ( max-width: $tablet_portrait + px ) {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%; 
+        height: 100vh;
+        background-color: white;
+        transform: translate3d(0, 100%, 0);
+        overflow: scroll;
+    	-webkit-overflow-scrolling: touch;
+    	
+        padding-bottom: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+	    text-align: center;
+	    
+	    padding: 40px 0;
+        
+        &__menu {
+	        width: 100%;
+	        margin-bottom: 20px;
+
+            & > li {  
+               a {
+                   display: inline-block;
+                   padding: 10px 0;
+                   font-size: rem(20);
+               }
+            }
+        }
+        
+        
+        
+
+        &.is-visible {
+            transition: all 300ms ease;
+            transform: translate3d(0,0,0);
+        }
+    }
+}
