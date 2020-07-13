@@ -60,7 +60,13 @@
         }
                         
         &__item {
-                        
+            
+            &:first-of-type {
+                @media ( min-width: $tablet_portrait + 1px ) {
+                    max-width: 560px;
+                }
+            }    
+   
             &:last-of-type {
                 margin: 0 auto;
                 
@@ -75,10 +81,6 @@
             }
             
             
-        }
-        
-        &:last-of-type {
-            background-color: red;
         }
     }
     

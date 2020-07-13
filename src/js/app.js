@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded',function() {
         window.bLazy = new Blazy();
 
         // Anims on inview
-//        window.animsInit()   
+        window.animsInit()   
     };
     
     

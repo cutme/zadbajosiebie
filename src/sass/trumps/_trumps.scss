@@ -1,6 +1,5 @@
 html:not(.ie) {
     .anim {
-        .is-loaded & {
             &--delay1 {
                 transition-delay: 150ms;
             }
@@ -42,7 +41,6 @@ html:not(.ie) {
                 transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
                 opacity: 1;
             }
-        }
     }
     
     hr.anim {

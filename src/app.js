@@ -7,8 +7,7 @@ require('./js/ismobile.js');
 require('./js/gototarget.js');
 require('./js/helpers.js');
 require('./js/nav.js');
-
-//require('./js/inview.js');
+require('./js/inview.js');
 
 //require('./js/scrollpos.js');
 //require('./js/scrollprogress.js');
