@@ -1,5 +1,28 @@
 .c-nav {
+    @extend %rel;
     @include z-index(nav);
+    
+    &:before, &:after {
+        @extend %abs;
+        @extend %abs-after;
+        z-index: -1;
+        background-repeat: no-repeat;
+    }
+    
+    &:before {
+        left: 0;
+        width: 150px; height: 370px;
+        background-image: url(../img/assets/nav-shape-1.svg);     
+        top: 100%;
+    }
+    
+    &:after {
+        left: auto;
+        right: 0; top: 50%;
+        transform: translateY(-50%);
+        width: 140px; height: 460px;
+        background-image: url(../img/assets/nav-shape-2.svg);        
+    }
     
     &__menu {
         
