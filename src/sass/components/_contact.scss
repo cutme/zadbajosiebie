@@ -10,18 +10,18 @@
         }
     }
     
-    address {
-        p {
-            letter-spacing: .5px;
-            font-family: $merriweather;
+    &__address {
+        address {
+            p {
+                letter-spacing: .5px;
+                font-family: $merriweather;
+            }
         }
-    }
-    
-    .o-article {
-        max-width: 560px;
-        margin: 0 auto;
         
-        
+        .o-article {
+            max-width: 560px;
+            margin: 0 auto;
+        }
     }
     
     .o-lead {

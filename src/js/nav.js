@@ -4,14 +4,15 @@ const enableBodyScroll = bodyScrollLock.enableBodyScroll;
 
 document.addEventListener('DOMContentLoaded',function() {
 
-    const el = document.getElementsByClassName('js-nav')[0],
-          nav = document.getElementsByClassName('js-children'),
-          menu = document.getElementsByClassName('js-menu')[0],
-          hamburger = document.getElementsByClassName('js-hamburger')[0],
-          parent = el.getElementsByTagName('li');
+    const hamburger = document.getElementsByClassName('js-hamburger')[0];
+    const nav = document.getElementsByClassName('js-nav')[0];
 
     const init = function() {
 
+        const menu = document.getElementsByClassName('js-menu')[0],
+              hamburger = document.getElementsByClassName('js-hamburger')[0],
+              parent = nav.getElementsByTagName('li');
+          
         let ww = 0;
         
 /*
@@ -28,24 +29,22 @@ document.addEventListener('DOMContentLoaded',function() {
             }
         }
         
+        const checkWindowHeight = function() {
+            wh = window.innerHeight - 100;           
+            
+            if (wh <= menu.clientHeight) {
+				nav.classList.add('is-block');
+            } else {
+	            nav.classList.remove('is-block');
+            }
+        };  
+        
         const hideMenu = function() {
 
-            enableBodyScroll(el);
-            el.classList.remove('is-visible');
+            enableBodyScroll(nav);
+            nav.classList.remove('is-visible');
             hamburger.classList.remove('is-active');
-
-            for (let i = 0; i < nav.length; i ++) {
-                nav[i].classList.remove('is-active');
-            }
-            
-            //cutme.Helpers.detach(searchform__content, searchform);
-            //searchform__content.classList.remove('is-visible');
-            
-            let parent = el.getElementsByClassName('menu-item-has-children');
-            
-            for (let i = 0; i < parent.length; i ++) {
-                parent[i].classList.remove('is-active');
-            }
+            document.body.classList.remove('mobile-menu');
         };
 
         const showMenu = function(e) {
@@ -55,31 +54,24 @@ document.addEventListener('DOMContentLoaded',function() {
                 hideMenu();            
             
             } else {
-            
-                disableBodyScroll(el);
-                el.classList.add('is-visible');
+
+                disableBodyScroll(nav);
+                nav.classList.add('is-visible');
                 hamburger.classList.add('is-active');
-                
-                //cutme.Helpers.detach(searchform__content, el);
-                
-               /*
- setTimeout(function() {
-	                searchform__content.classList.add('is-visible');
-                }, 100);
-*/
+                document.body.classList.add('mobile-menu');
             }
         };
 
         
 
         window.addEventListener('resize', checkWindowWidth);
+        window.addEventListener('resize', checkWindowHeight);
 
         checkWindowWidth();
+        checkWindowHeight();
 
         hamburger.addEventListener('click', showMenu);
 
-
-        const parent = menu.getElementsByTagName('li');
 
         const submenu = function(e) {
         
@@ -127,6 +119,6 @@ document.addEventListener('DOMContentLoaded',function() {
 
     };
 
-    el ? init() : false;
+    nav ? init() : false;
 
 }, false);

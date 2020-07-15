@@ -1,16 +1,19 @@
 .c-footer {
-    text-align: center;
     
-    img {
-        margin: 0 auto;
-    }
-    
-    .o-lead {
-        &--5 {
-            text-transform: uppercase;
+    &__logo {
+        text-align: center;
+        
+        img {
+            margin: 0 auto;
+        }
+        
+        .o-lead {
+            &--5 {
+                text-transform: uppercase;
+            }
         }
     }
-    
+
     .o-section {
         padding: {
             top: 0;

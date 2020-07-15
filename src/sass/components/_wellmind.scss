@@ -42,6 +42,12 @@
                     }
                 }
             }
+            
+            &:hover {
+                .desktop & {
+                    color: $c-violet-01;
+                }
+            }
         }        
     }
     

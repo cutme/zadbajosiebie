@@ -2,8 +2,15 @@
     @include z-index(nav);
     
     &__menu {
-        @media ( min-width: $tablet_portrait + 1px ) {
-            display: flex;
+        
+        ul {
+            @media ( min-width: $tablet_portrait + 1px ) {
+                display: flex;
+            }
+            
+            @media ( max-width: $tablet_portrait + px ) {
+            	margin-bottom: 70px;
+            }
         }
         
         li {
@@ -11,12 +18,32 @@
         }
         
         a {
+            @extend %rel;
             white-space: nowrap;
             font-size: rem(14);
             
+            &:after {
+            	@extend %abs;
+            	@extend %abs-after;
+            	@extend %anim;
+            	left: 50%;
+                transform: translate3d(-50%, 0, 0);
+                width: 30px; height: 3px;
+            	background-color: $c-violet-01;
+                border-radius: 6px;
+                opacity: 0;
+            	
+            	@media ( max-width: $tablet_portrait + px ) {
+            	    display: none;
+                }
+            }
+            
             &:hover {
                 .desktop & {
-                    color: $c-violet-01;
+                    &:after {
+                        opacity: 1;
+                        transform: translate3d(-50%, 12px, 0);
+                    }
                 }
             }
         }
@@ -26,17 +53,28 @@
         display: block;
     }
     
+    .c-contact__address,
+    .c-footer__logo {
+        @media ( min-width: $tablet_portrait + 1px ) {
+            display: none;
+        }
+    }
+    
+    .c-contact__address {
+        margin-bottom: 40px;
+    }
+    
     @media ( max-width: $tablet_portrait + px ) {
         position: fixed;
         left: 0;
-        top: 0;
+        top: 100px;
         width: 100%; 
-        height: 100vh;
+        height: calc(100vh - 100px);
         background-color: white;
         transform: translate3d(0, 100%, 0);
         overflow: scroll;
     	-webkit-overflow-scrolling: touch;
-    	
+
         padding-bottom: 40px;
         display: flex;
         flex-wrap: wrap;
@@ -50,11 +88,11 @@
 	        width: 100%;
 	        margin-bottom: 20px;
 
-            & > li {  
+            li {  
                a {
                    display: inline-block;
                    padding: 10px 0;
-                   font-size: rem(20);
+                   font-size: rem(24);
                }
             }
         }
@@ -63,7 +101,7 @@
         
 
         &.is-visible {
-            transition: all 300ms ease;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             transform: translate3d(0,0,0);
         }
     }
