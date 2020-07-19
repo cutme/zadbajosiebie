@@ -1,6 +1,7 @@
 .c-intro {
 
     img {
+        @extend %animfix;
         transition-duration: .3s !important;
     }
     

@@ -54,7 +54,7 @@
             	@extend %abs-after;
             	@extend %anim;
             	left: 50%;
-                transform: translate3d(-50%, 0, 0);
+                //transform: translate3d(-50%, 0, 0);
                 width: 30px; height: 3px;
             	background-color: $c-violet-01;
                 border-radius: 6px;
@@ -69,7 +69,7 @@
                 .desktop & {
                     &:after {
                         opacity: 1;
-                        transform: translate3d(-50%, 12px, 0);
+                        //transform: translate3d(-50%, 12px, 0);
                     }
                 }
             }
@@ -98,17 +98,17 @@
         width: 100%; 
         height: calc(100vh - 100px);
         background-color: white;
-        transform: translate3d(0, 100%, 0);
+        //transform: translate3d(0, 100%, 0);
         overflow: scroll;
+        opacity: 0;
     	-webkit-overflow-scrolling: touch;
-
+        pointer-events: none;
         padding-bottom: 40px;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
         justify-content: center;
 	    text-align: center;
-	    
 	    padding: 40px 0;
         
         &__menu {
@@ -130,6 +130,8 @@
         &.is-visible {
             transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             transform: translate3d(0,0,0);
+            opacity: 1;
+            pointer-events: auto;
         }
     }
 }
